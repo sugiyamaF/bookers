@@ -1,0 +1,22 @@
+<div class="notice">
+    <%= flash[:notice] %>
+</div>
+
+<%= form_with model: @book do |f| %>
+
+
+<body>
+  <p>
+    <strong>Title:</strong>
+    <td><%=@book.title %></td>
+  </p>
+  <p>
+    <strong>Body:</strong>
+    <td><%=@book.body %></td>
+  </p>
+
+  <a><%= link_to "Edit", edit_book_path(@book.id) %></a>
+    |
+  <a class="back" href="/books">Back</a>
+</body>
+<% end %>
